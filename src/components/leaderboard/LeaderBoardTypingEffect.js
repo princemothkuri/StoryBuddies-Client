@@ -31,7 +31,7 @@ const LeaderBoardTypingEffect = ({ selectedStoryTitle }) => {
 
       return () => clearInterval(timer);
     }
-  }, [index, is430Screen, is768Screen, selectedStoryTitle]);
+  }, [index, is430Screen, is768Screen, is393Screen, selectedStoryTitle]);
 
   useEffect(() => {
     setDisplayText("");

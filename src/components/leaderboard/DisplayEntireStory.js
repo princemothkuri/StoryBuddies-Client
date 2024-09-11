@@ -12,7 +12,6 @@ const DisplayEntireStory = () => {
   const dispatch = useDispatch();
 
   const is430Screen = useMediaQuery("(max-width:430px)");
-  const is393Screen = useMediaQuery("(max-width:393px)");
 
   const storyRefs = useRef([]);
 
