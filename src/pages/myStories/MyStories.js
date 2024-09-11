@@ -122,8 +122,8 @@ const MyStories = () => {
                     sm={is430Screen ? 12 : is768Screen ? 6 : 4}
                     key={story._id}
                     sx={{
-                      marginBottom: "10px", // Reduce the bottom margin to decrease space between cards
-                      padding: 0, // Remove padding if any
+                      marginBottom: "10px",
+                      padding: 0,
                       overflowY: "scroll",
                       "&::-webkit-scrollbar": {
                         display: "none",

@@ -7,17 +7,19 @@ const LeaderBoardTypingEffect = ({ selectedStoryTitle }) => {
 
   const is768Screen = useMediaQuery("(max-width:768px)");
   const is430Screen = useMediaQuery("(max-width:430px)");
+  const is393Screen = useMediaQuery("(max-width:393px)");
 
   useEffect(() => {
     let truncatedStoryTitle = selectedStoryTitle;
 
     if (
-      truncatedStoryTitle.length > (is430Screen ? 20 : is768Screen ? 40 : 50)
+      truncatedStoryTitle.length >
+      (is393Screen ? 18 : is430Screen ? 20 : is768Screen ? 40 : 50)
     ) {
       truncatedStoryTitle =
         truncatedStoryTitle.substring(
           0,
-          is430Screen ? 20 : is768Screen ? 40 : 50
+          is393Screen ? 18 : is430Screen ? 20 : is768Screen ? 40 : 50
         ) + "...";
     }
 
@@ -38,7 +40,7 @@ const LeaderBoardTypingEffect = ({ selectedStoryTitle }) => {
 
   return (
     <Tooltip title={selectedStoryTitle} arrow>
-      <span style={{ fontSize: "22px" }}>{displayText}</span>
+      <span style={{ fontSize: "20px" }}>{displayText}</span>
     </Tooltip>
   );
 };

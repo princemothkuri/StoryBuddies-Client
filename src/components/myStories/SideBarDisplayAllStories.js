@@ -74,7 +74,7 @@ const SideBarDisplayAllStories = ({ onSelectEpisode }) => {
                 }}
                 key={item.session_id}
               >
-                {item.user_prompt.substring(0, is393Screen ? 15 : 20) + "..."}
+                {item.user_prompt.substring(0, is393Screen ? 13 : 20) + "..."}
               </ListItem>
             </Tooltip>
           );

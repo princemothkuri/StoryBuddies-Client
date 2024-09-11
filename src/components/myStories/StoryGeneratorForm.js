@@ -146,7 +146,7 @@ const StoryGeneratorForm = ({ handleNewStoryGeneration, isOpen }) => {
           backgroundColor: "transparent",
           borderRadius: "8px",
           marginTop: is393Screen
-            ? "-190px"
+            ? "-150px"
             : is430Screen
             ? "-220px"
             : is768Screen

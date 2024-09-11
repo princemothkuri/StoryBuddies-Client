@@ -12,6 +12,7 @@ import { useDispatch } from "react-redux";
 const LeaderBoardHeader = ({ selectedStoryTitle, toggleDrawer }) => {
   const dispatch = useDispatch();
   const is430Screen = useMediaQuery("(max-width:430px)");
+  const is393Screen = useMediaQuery("(max-width:393px)");
 
   return (
     <Box
@@ -36,15 +37,14 @@ const LeaderBoardHeader = ({ selectedStoryTitle, toggleDrawer }) => {
         variant="h5"
         sx={{
           fontWeight: "bold",
-          // border: "1px solid",
           fontSize: "26px",
           color: "#094b65",
           padding: "5px",
-          // marginTop: "15px",
           display: "flex",
           justifyContent: "start",
           alignItems: "center",
           gap: "10px",
+          marginLeft: is393Screen ? "-20px" : null,
         }}
       >
         {selectedStoryTitle !== null ? (

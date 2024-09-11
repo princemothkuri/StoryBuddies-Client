@@ -64,7 +64,7 @@ const StoryItems = ({ story }) => {
               marginTop: "5px",
             }}
           >
-            {story.title}
+            {is430Screen ? story.title.substring(0, 40) + "..." : story.title}
           </Typography>
           <Typography variant="body2" sx={{ marginTop: "10px" }}>
             {story.story.length > 100

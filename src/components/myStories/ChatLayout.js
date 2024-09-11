@@ -18,6 +18,7 @@ const ChatLayout = () => {
   const is768Screen = useMediaQuery("(max-width:768px)");
   const is430Screen = useMediaQuery("(max-width:430px)");
   const is393Screen = useMediaQuery("(max-width:393px)");
+
   const { token } = useSelector((state) => state.mainReducer);
   const [selectedEpisode, setSelectedEpisode] = useState("Episode-1");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -154,7 +155,7 @@ const ChatLayout = () => {
               <Box
                 sx={{
                   position: "absolute",
-                  top: "100%",
+                  top: "0px",
                   left: -20,
                   // top: 0,
                   width: "460px",
