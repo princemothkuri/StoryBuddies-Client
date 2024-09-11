@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+
+:root {
+  --primary: #094b65;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+#header .logo {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.nav-links ul li p {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: var(--primary);
+  border-radius: 20px;
+}
+
+.nav-links ul li p:hover,
+.nav-links ul li p.active {
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+  }
+
+  .nav-links ul {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    padding-top: 15%;
+    height: calc(100vh - 60px);
+    background-color: linear-gradient(to top, #1f80a7);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow-y: auto;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-links.open ul {
+    transform: translateY(0);
+  }
+
+  .nav-links ul li {
+    margin: 20px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--primary), transparent);
+  z-index: 10;
+}
+
+section img {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section #text {
+  position: absolute;
+  color: var(--primary);
+  font-size: 10vw;
+  text-align: center;
+  line-height: 0.55em;
+  font-family: "Rancho", cursive;
+  transform: translatey(-50%);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+section #text span {
+  font-size: 0.18em;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+#btns {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#btns button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  transform: translatey(100px);
+
+  cursor: pointer;
+}
+
+#btns .start {
+  color: white;
+  border: none;
+  background: var(--primary);
+}
+
+#btns .continue {
+  border: solid 1px var(--primary);
+  background: #fff;
+  color: var(--primary);
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  background: var(--primary);
+}
+
+.sec h2 {
+  font-size: 3.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sec p {
+  font-size: 1em;
+  color: #fff;
+}
+
+footer {
+  position: relative;
+  padding: 0px 100px;
+  background: var(--primary);
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
