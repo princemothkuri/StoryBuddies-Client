@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://storybuddies-server.onrender.com";
 
 // User Authentication
 export const register = (userData) =>
